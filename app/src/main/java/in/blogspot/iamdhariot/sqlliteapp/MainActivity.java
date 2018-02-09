@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
@@ -17,6 +18,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBtnSave,mBtnShow;
     private EditText mName;
     private EditText mMobileNumber;
+
 
     // creating databaseHandler object
     private DatabaseHandler databaseHandler;
@@ -50,7 +52,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 contactsStore();
                 break;
             case R.id.btnShow:
-
                 startActivity(new Intent(MainActivity.this,ShowActivity.class));
                 break;
         }
@@ -62,6 +63,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         progressDialog.show();
         databaseHandler.addContact(new Contact(name,mobileNumber));
 
+        //Movie movie = new Movie("Mad Max: Fury Road", "Action & Adventure", "2015");
+        //movieList.add(movie);
+
+
        /*
        for testing purpose
 
@@ -70,17 +75,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         databaseHandler.addContact(new Contact("Tommy", "9522222222"));
         databaseHandler.addContact(new Contact("Karthik", "9533333333"));
          */
+
         progressDialog.dismiss();
         Toast.makeText(this,"Contact inserted",Toast.LENGTH_SHORT).show();
 
-        // reading the contacts
-        List<Contact> contacts= databaseHandler.getAllContacts();
-        for(Contact con:contacts){
-            // for testing
-            String log = "Id: "+con.getmId()+" ,Name: " + con.getmName() + " ,Mobile: " + con.getmMobileNo();
-            Log.d("Name : ",log);
 
-        }
+
 
     }
 }

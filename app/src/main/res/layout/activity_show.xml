@@ -1,23 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    android:scrollbars="vertical"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<android.support.v7.widget.RecyclerView
     android:layout_width="match_parent"
+    android:scrollbars="vertical"
+    android:id="@+id/contactRecycleView"
     android:layout_height="match_parent"
-    tools:context="in.blogspot.iamdhariot.sqlliteapp.ShowActivity">
 
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <android.support.v7.app.AlertController.RecycleListView
-        android:layout_width="match_parent"
-        android:scrollbars="vertical"
-        android:id="@+id/contactRecycleView"
-
-        android:layout_height="match_parent">
-
-
-    </android.support.v7.app.AlertController.RecycleListView>
-
-</LinearLayout>
+</android.support.v7.widget.RecyclerView>
