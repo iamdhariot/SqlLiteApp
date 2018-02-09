@@ -9,7 +9,6 @@
     android:elevation="10dp"
     android:longClickable="true"
     android:background="@drawable/ripple_layout"
-
     >
     <TextView
         android:layout_marginTop="10dp"
